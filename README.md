@@ -7,8 +7,6 @@ The initial functionality includes development tools to retrieve access tokens f
 
 The access token and other information will be written into the dotenv `.env` file which can then be read by other apps.
 
-This code was originally forked from a demo script in the RingCentral Ruby SDK.
-
 Supported services include:
 
 * [x] Dropbox
