@@ -74,6 +74,8 @@ module DotenvFile
     def build_line(k, v)
       "#{k}=#{v}"
     end
+
+    alias_method :read, :read_file
   end
 end
 
