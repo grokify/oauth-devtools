@@ -7,11 +7,10 @@ Initially, the goal is to easily retrieve OAuth access tokens for development pu
 
 * [x] Dropbox OAuth Access Token Retriever
 
-## Pre-requisites
+## Prerequisites :warning:
 
-:warning:
-
-  This theme requires ruby and rubygems installed
+* Ruby
+* Ruby Gems
 
 ## Installation
 
