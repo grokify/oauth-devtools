@@ -9,8 +9,8 @@ Currently, only Dropbox is supported, but as services are added, each will have 
 
 Supported services include:
 
-| Service | Input Variable(s) | Output Variable(s) |
-|---------|-------------------|--------------------|
+| Service | Input Variables | Output Variables |
+|---------|-----------------|------------------|
 | Dropbox | `DROPBOX_APP_KEY`, `DROPBOX_APP_SECRET`, `DROPBOX_OAUTH2_REDIRECT_URI` | `DROPBOX_ACCESS_TOKEN` |
 
 ## Prerequisites :warning:
