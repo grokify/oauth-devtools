@@ -94,7 +94,7 @@ end
 
 get '/' do
   session = {}
-  flow = get_dropbox_oauth2_flow(session)
+  flow = get_dropbox_oauth2_flow session
 
   dotenv_add('DROPBOX_AUTH_CSRF_TOKEN' => session[DROPBOX_CSRF_TOKEN_SESSION_KEY])
 
@@ -102,13 +102,12 @@ get '/' do
     dropbox_app_key: DROPBOX_APP_KEY,
     dropbox_app_secret: DROPBOX_APP_SECRET,
     dropbox_oauth2_redirect_uri: DROPBOX_OAUTH2_REDIRECT_URI,
-    dropbox_authorize_uri: flow.start()
-  }
+    dropbox_authorize_uri: flow.start}
 end
 
 get '/authorize' do
   flow = DropboxOAuth2Flow.new(DROPBOX_APP_KEY, DROPBOX_APP_SECRET)
-  authorize_url = flow.start()
+  authorize_url = flow.start
   redirect authorize_url
 end
 
@@ -122,8 +121,8 @@ get '/oauth_redirect_dropbox' do
 
     session = {DROPBOX_CSRF_TOKEN_SESSION_KEY => params['state'] || ''}
 
-    flow = get_dropbox_oauth2_flow(session)
-    access_token, user_id = flow.finish(params)
+    flow = get_dropbox_oauth2_flow session
+    access_token, user_id = flow.finish params
 
     dotenv_add(
       'DROPBOX_ACCESS_TOKEN' => access_token,
@@ -132,6 +131,5 @@ get '/oauth_redirect_dropbox' do
 
   erb :oauth, locals: {
     code: code,
-    token: access_token
-  }
+    token: access_token}
 end
