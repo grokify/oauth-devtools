@@ -3,9 +3,15 @@ OAuth DevTools
 
 This app provides a set of OAuth development tools.
 
-Initially, the goal is to easily retrieve OAuth access tokens for development purposes via 3-legged OAuth from services like Dropbox. This code was originally forked from a demo script in the RingCentral Ruby SDK.
+The initial functionality includes development tools to retrieve access tokens from 3-legged OAuth services.
 
-* [x] Dropbox OAuth Access Token Retriever
+The access token and other information will be written into the dotenv `.env` file which can then be read by other apps.
+
+This code was originally forked from a demo script in the RingCentral Ruby SDK.
+
+Supported services include:
+
+* [x] Dropbox
 
 ## Prerequisites :warning:
 
