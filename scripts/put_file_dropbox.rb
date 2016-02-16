@@ -78,11 +78,11 @@ def put_file(envpath, filepath_local)
   dotenv = DotenvFile::Editor.new.read envpath
 
   access_token = dotenv.data['DROPBOX_ACCESS_TOKEN']
-  client = DropboxClient.new(access_token)
+  client = DropboxClient.new access_token
 
-  file_local = open(filepath_local)
-  filepath_remote = File.basename(filepath_local)  
-  response = client.put_file(filepath_remote, file_local)
+  file_local = open filepath_local
+  filepath_remote = File.basename filepath_local
+  response = client.put_file filepath_remote, file_local
   puts 'uploaded: ', response.inspect
 end
 
