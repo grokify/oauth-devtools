@@ -3,9 +3,9 @@ OAuth DevTools
 
 This app provides a set of OAuth development tools.
 
-Currently, this tool provides an easy way to retrieve access tokens from cloud services (e.g. Dropbox) and stores them on the file system in a `.env` file that can be read easily by apps in any language. This removes the need of manually copy and pasting access tokens into apps for development purposes.
+It provides an easy way to retrieve access tokens from cloud services (e.g. Dropbox) and stores them on the file system in a `.env` file that can be read easily by apps in any language. This removes the need of manually copy and pasting access tokens into apps for development purposes.
 
-The access token and other information will be written into the dotenv `.env` file which can then be read by other apps. Today, only Dropbox is supported, but as services are added, each will have information prefixed by the service name.
+Currently, only Dropbox is supported, but as services are added, each will have information prefixed by the service name.
 
 Supported services include:
 
