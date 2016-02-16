@@ -10,7 +10,7 @@ It provides an easy way to retrieve access tokens from cloud services (e.g. Drop
 1. Eliminates need to copy and paste access token in development by storing the access token in a program accessible file system location
 1. Provides example code for production OAuth with redirection when [some SDK tutorials](https://www.dropbox.com/developers-v1/core/start/ruby) do not
 
-### Support
+### Integrations
 
 Currently, only Dropbox is supported, but as services are added, each will have information prefixed by the service name.
 
