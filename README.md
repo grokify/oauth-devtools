@@ -3,7 +3,7 @@ OAuth DevTools
 
 This app provides a set of OAuth development tools.
 
-It provides an easy way to retrieve access tokens from cloud services (e.g. Dropbox) and stores them on the file system in a `.env` file that can be read easily by apps in any language. This removes the need of manually copy and pasting access tokens into apps for development purposes.
+It provides an easy way to retrieve access tokens from cloud services (e.g. Dropbox) and stores them on the file system in a `.env` file that can be read easily by apps in any language. This removes the need of manually copy and pasting access tokens into apps for development purposes. This app provides an OAuth redirect URI which is necessary to configure in your app.
 
 Currently, only Dropbox is supported, but as services are added, each will have information prefixed by the service name.
 
@@ -53,6 +53,12 @@ $ ruby app.rb
 ``` 
 
 Then navigate your browser to the URL presented, e.g. `http://localhost:4567`.
+
+## Links
+
+Dropbox Ruby tutorial
+
+* https://www.dropbox.com/developers-v1/core/start/ruby
 
 ## Contributing
 
