@@ -3,7 +3,7 @@ OAuth DevTools
 
 This app provides a set of OAuth development tools.
 
-It includes a web server that performs OAuth 2.0 with services and then writes the retrieved access token to the file system in a dotenv `.env` file so that it can be easily used by applications during development.
+It includes a web server app that performs OAuth 2.0 with services and then writes the retrieved access token to the file system in a dotenv `.env` file so that it can be easily used by applications during development. Code in the `scripts` directory use the `.env` file to perform example tasks.
 
 ### Benefits
 
