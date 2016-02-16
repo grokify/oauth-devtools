@@ -15,11 +15,17 @@ Supported services include:
 
 ## Prerequisites :warning:
 
-* [Ruby](https://www.ruby-lang.org/)
-* [RubyGems](https://rubygems.org/)
-* [Bundler](http://bundler.io/)
+* [Ruby](https://www.ruby-lang.org/) / [RubyGems](https://rubygems.org/)
 
 ## Installation
+
+Install [Bundler](http://bundler.io/) if necessary:
+
+```sh
+$ gem install bundler
+```
+
+Install app and required gems:
 
 ```sh
 $ git clone https://github.com/grokify/oauth-devtools
