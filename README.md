@@ -63,6 +63,10 @@ $ ruby app.rb
 
 Then navigate your browser to the URL presented, e.g. `http://localhost:4567`.
 
+## Notes
+
+This project is adapted from the example code for OAuth 2.0 authorization code grant in the [RingCentral Ruby SDK](https://github.com/grokify/ringcentral-sdk-ruby).
+
 ## Links
 
 Dropbox Ruby tutorial
