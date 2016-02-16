@@ -1,5 +1,10 @@
 #!ruby
 
+# This program posts a file to Dropbox using the provided .env
+# filepath. The usage is as follows:
+#
+# put_file_dropbox.rb path/to/.env path/to/file
+
 require 'dropbox_sdk'
 
 module DotenvFile
@@ -69,26 +74,30 @@ module DotenvFile
   end
 end
 
-def put_file(path_local)
-  dotenv = DotenvFile::Editor.new.read '../app/.env'
+def put_file(envpath, filepath_local)
+  dotenv = DotenvFile::Editor.new.read envpath
 
   access_token = dotenv.data['DROPBOX_ACCESS_TOKEN']
   client = DropboxClient.new(access_token)
 
-  file_local = open(path_local)
-  path_remote = File.basename(path_local)  
-  response = client.put_file(path_remote, file_local)
-  puts "uploaded:", response.inspect
+  file_local = open(filepath_local)
+  filepath_remote = File.basename(filepath_local)  
+  response = client.put_file(filepath_remote, file_local)
+  puts 'uploaded: ', response.inspect
 end
 
-filepath = ARGV[0]
+envpath = ARGV[0].to_s
+filepath = ARGV[1].to_s
 
-if File.exists? filepath.to_s
-  put_file(filepath)
-elsif filepath.to_s.length > 0
+if File.exists?(envpath) && File.exists?(filepath.to_s)
+  put_file(envpath, filepath)
+elsif envpath.to_s.length > 0 || filepath.to_s.length > 0
   puts "file not found: #{filepath}"
+  puts 'usage: put_file_dropbox.rb path/to/.env path/to/file'
+  puts 'example: put_file_dropbox.rb ../app/.env test_file.pdf'
 else
-  puts 'usage: put_file_dropbox.rb /path/to/file'
+  puts 'usage: put_file_dropbox.rb path/to/.env path/to/file'
+  puts 'example: put_file_dropbox.rb ../app/.env test_file.pdf'
 end
 
 puts 'DONE'
