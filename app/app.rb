@@ -118,8 +118,7 @@ get '/oauth_redirect_dropbox' do
   if code
     dotenv_add(
       'DROPBOX_AUTHORIZATION_CODE' => code,
-      'DROPBOX_REDIRECT_PARAMS' => MultiJson.encode(params)
-    )
+      'DROPBOX_REDIRECT_PARAMS' => MultiJson.encode(params))
 
     session = {DROPBOX_CSRF_TOKEN_SESSION_KEY => params['state'] || ''}
 
@@ -128,8 +127,7 @@ get '/oauth_redirect_dropbox' do
 
     dotenv_add(
       'DROPBOX_ACCESS_TOKEN' => access_token,
-      'DROPBOX_USER_ID' => user_id
-    )
+      'DROPBOX_USER_ID' => user_id)
   end
 
   erb :oauth, locals: {
