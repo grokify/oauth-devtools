@@ -9,7 +9,9 @@ Currently, only Dropbox is supported, but as services are added, each will have 
 
 Supported services include:
 
-* [x] Dropbox
+| Service | Access Token Env Variable |
+|---------|---------------------------|
+| [x] Dropbox | `DROPBOX_ACCESS_TOKEN` |
 
 ## Prerequisites :warning:
 
