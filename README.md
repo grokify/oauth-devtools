@@ -11,7 +11,7 @@ Supported services include:
 
 | Service | Access Token Env Variable |
 |---------|---------------------------|
-| [x] Dropbox | `DROPBOX_ACCESS_TOKEN` |
+| Dropbox | `DROPBOX_ACCESS_TOKEN` |
 
 ## Prerequisites :warning:
 
