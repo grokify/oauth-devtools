@@ -31,7 +31,7 @@ Ensure you are in the `oauth-devtools/app` directory and then create / edit the 
 
 ```sh
 $ cd app
-$ cp sample.env .env
+$ cp sample.env.txt .env
 $ vim .env
 ```
 
