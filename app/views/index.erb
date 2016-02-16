@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+        <style>
+p {font-family: Arial, sans-serif;}
+        </style>
+	</head>
+	<body>
+		<h1>OAuth Dev Helper</h1>
+
+        <hr/>
+
+        <h2>Dropbox OAuth2 Access Token Helper</h2>
+        <ul>
+            <li>App Key: <%= dropbox_app_key %></li>
+            <li>App Secret: <%= dropbox_app_secret %></li>
+            <li>Redirect URI: <%= dropbox_oauth2_redirect_uri %></li>
+            <li>Authorize URI: <%= dropbox_authorize_uri %></li>
+        </ul>
+
+        <p><a href="<%= dropbox_authorize_uri %>">Get Token</a></p>
+
+        <hr/>
+	</body>
+</html>
