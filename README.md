@@ -13,8 +13,9 @@ Supported services include:
 
 ## Prerequisites :warning:
 
-* Ruby
-* Ruby Gems
+* [Ruby](https://www.ruby-lang.org/)
+* [RubyGems](https://rubygems.org/)
+* [Bundler](http://bundler.io/)
 
 ## Installation
 
